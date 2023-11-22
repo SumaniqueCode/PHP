@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting</title>
+    <script>
+        function sorting() {
+        let num = [0.2,0.01,1,2,5,9,6,3,11,46,27,67,98,45];
+        let result1 = " ";
+        for (let i = 0; i < num.length; i++) {
+            for (let j = i+1; j < num.length; j++) {
+                if(num[i]>num[j])
+                {
+                    let temp = num[i];
+                    num[i]= num[j];
+                    num[j] =temp ;
+                }
+                
+            }
+            result1 = num[i];
+            document.getElementById("ascending").innerHTML= result1;
+            result2 = num[0];
+            document.getElementById("descending").innerHTML= result2;
+        }
+        }
+</script>
+<style>
+    *{
+        margin: 0px;
+        padding: 0px;
+    }
+    body{
+        margin-left: 30%;
+        margin-top: 10%;
+    }
+    button{
+        background: rgb(51, 0, 253);
+        border: 2px solid gold;
+        border-radius: 10px;
+        height: 30px;
+        width: 80px;
+        color: aliceblue;
+    }
+</style>
+</head>
+<body>
+    <div>
+        <button onclick="return sorting()">Sort data</button>
+        <h1 style='color:red'>largest:</h1><h3 id ='ascending' style='color:blue'></h3></br>
+        <h1 style='color:red'>Smallest:</h1><h3 id ='descending' style='color:blue'></h3></br>
+
+    </div>
+</body>
+</html>

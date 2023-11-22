@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+    <style>
+        body{
+            margin-left: 20%;
+            margin-top: 10%;
+        }
+        *{
+            margin: 2px;
+        }
+        button{
+        background: rgb(51, 0, 253);
+        border: 2px solid gold;
+        border-radius: 10px;
+        height: 35px;
+        width: 100px;
+        color: aliceblue;
+    }
+    </style>
+</head>
+<body>
+    <form action="store.php" method="post">
+        <legend>Enter your data</legend>
+        name: <input type="text" name="name">
+        email: <input type="email" name="email">
+        password: <input type="text" name="password">
+        phone: <input type="number" name="phone" id=""><br>
+        <button type="submit">Submit</button>
+
+    </form>
+</body>
+</html>
